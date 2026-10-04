@@ -1,8 +1,8 @@
 # Writing Systems
 
-**Make AI write clearly. Cut the fluff. Get to the point.**
+**Make AI write clearly.** Cut the filler words, keep sentences short, and always lead with the answer.
 
-[![CI](https://github.com/chamaththiwanka/writing-systems/actions/workflows/ci.yml/badge.svg)](https://github.com/chamaththiwanka/writing-systems/actions)
+[![CI](https://github.com/chama-x/writing-systems/actions/workflows/ci.yml/badge.svg)](https://github.com/chama-x/writing-systems/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Zero Dependencies](https://img.shields.io/badge/Dependencies-Zero-success.svg)](#)
 
