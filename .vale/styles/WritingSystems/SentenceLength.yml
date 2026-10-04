@@ -1,0 +1,5 @@
+extends: metric
+message: "Sentence exceeds the 25-word ceiling (%s words). Split into shorter clauses."
+level: warning
+metric: sentence_length
+condition: "> 25"

@@ -1,0 +1,20 @@
+name: 'AI Writing Systems Linter'
+description: 'Automated linter enforcing Minto BLUF, Controlled Syntax, and Anti-Slop regularizers in Markdown.'
+author: 'Chamath Thiwanka'
+branding:
+  icon: 'edit-3'
+  color: 'blue'
+
+inputs:
+  path:
+    description: 'Target files or glob pattern to audit'
+    required: false
+    default: 'docs/*.md'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Run Writing Systems Linter
+      shell: bash
+      run: |
+        python3 "${{ github.action_path }}/scripts/check_writing.py" ${{ inputs.path }}
