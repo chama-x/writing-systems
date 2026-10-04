@@ -9,32 +9,32 @@
 [![Zero Dependencies](https://img.shields.io/badge/Dependencies-Zero-success.svg)](#)
 [![Token Savings](https://img.shields.io/badge/Context%20Savings--60%25-orange.svg)](#)
 
-Writing Systems eliminates conversational AI slop. It enforces Minto BLUF, Controlled Syntax, and anti-slop regularizers directly in Markdown documents.
+Cut multi-turn AI context overhead by 60%. Writing Systems enforces Minto BLUF, controlled sentence bounds, and automated prose verification across your repository.
 
 ---
 
-## Quickstart: The One-Command Scaffolder
+## Quickstart: Zero-Dependency Scaffolder
 
-Scaffold the complete system with one terminal command:
+Run this terminal command in your project root:
 
 ```bash
 npx writing-systems init
 ```
 
-*Like `shadcn/ui`, you own the code. No permanent runtime dependencies added.*
+*This command copies three standalone files directly into your repository. It installs zero npm packages.*
 
-### CLI Commands
+### CLI Operations
 
-- **Initialize project:** Run `npx writing-systems init` to scaffold `AGENTS.md`, Vale styles, and the Python linter.
-- **Run prose audit:** Run `npx writing-systems check` to validate sentence length, slop words, and cadence variance.
-- **Display system info:** Run `npx writing-systems info` to review the five universal operating invariants.
+- **Scaffold project files:** Run `npx writing-systems init` to create `AGENTS.md`, Vale styles, and the Python linter.
+- **Audit markdown documents:** Run `npx writing-systems check` to verify sentence word limits, slop words, and cadence variance.
+- **Inspect system invariants:** Run `npx writing-systems info` to print the five universal operating rules.
 
 ---
 
-## Proof of Life: The Before & After Contrast
+## Token Reduction Benchmark
 
 ```text
-┌── [BEFORE] DEFAULT CONVERSATIONAL AI SLOP (312 Tokens) ──────────────────────────┐
+┌── [BEFORE] CONVERSATIONAL AI PREAMBLE (312 Tokens) ──────────────────────────────┐
 │ "Certainly! In today's cloud environment, it is important to examine our system  │
 │ architecture. While microservices offer many modular components, they also       │
 │ introduce complex operational dynamics. After carefully examining our           │
@@ -57,12 +57,12 @@ npx writing-systems init
 
 ## Two-Tier Enforcement Architecture
 
-Cognitive invariants belong directly in model context. Mechanical checks run inside background linters to prevent prompt attention starvation.
+Cognitive invariants guide generation inside model prompts. Mechanical counts run inside background linters to prevent prompt attention starvation.
 
 ```mermaid
 flowchart LR
     subgraph Tier1 ["Tier 1: Generation Time (Cognitive)"]
-        A["AGENTS.md Contract"] --> B["AI Coding Agent"]
+        A["AGENTS.md Context"] --> B["AI Coding Agent"]
         B --> C["Concise Technical Output"]
     end
     subgraph Tier2 ["Tier 2: Verification Time (Mechanical)"]
@@ -74,7 +74,7 @@ flowchart LR
 ```
 
 - **Tier 1 (Cognitive Invariants):** `AGENTS.md` directs high-order model reasoning, active voice, bold anchors, and literal precision.
-- **Tier 2 (Mechanical Checks):** `scripts/check_writing.py` and Vale enforce word ceilings, slop word blacklists, and monotone run detection in CI.
+- **Tier 2 (Mechanical Checks):** `scripts/check_writing.py` and Vale enforce word ceilings, slop word blacklists, and cadence validation in CI.
 
 ---
 
@@ -82,17 +82,17 @@ flowchart LR
 
 | Invariant | Target Standard | Operational Action | Prohibited Pattern |
 | :--- | :--- | :--- | :--- |
-| **1. Minto BLUF** | First 50 tokens | Apply Action, Conditional, or Diagnostic BLUFs | Greetings, conversational preambles |
-| **2. Controlled Syntax** | Max 20w (proc) / 25w (desc) | Active voice; <= 3 consecutive nouns | Passive voice, run-on compound clauses |
-| **3. Cadence Variance** | Alternate 5w and 25w | Alternate punchy assertions with compound mechanics | Monotone runs (>= 4 same length) |
-| **4. Literal Precision** | Operational facts | State concrete system mechanics directly | Figurative metaphors, filler phrases |
-| **5. Ubiquitous Language** | Canonical entity naming | Single canonical term per domain entity | Synonym drift within bounded context |
+| **1. Minto BLUF** | First 50 tokens | State the governing action, trade-off, or diagnosis immediately | Conversational greetings, throat-clearing preambles |
+| **2. Controlled Syntax** | Max 20w (proc) / 25w (desc) | Use active voice and cap consecutive nouns at three | Passive nominalizations, run-on compound clauses |
+| **3. Cadence Variance** | Alternate 5w and 25w | Alternate punchy assertions with compound mechanics | Monotone sentence runs (>= 4 identical lengths) |
+| **4. Literal Precision** | Operational facts | State concrete system mechanics directly | Figurative metaphors, ornamental analogies |
+| **5. Ubiquitous Language** | Canonical entity naming | Use exactly one term per domain entity | Synonym swapping within a bounded context |
 
 ---
 
 ## AI Agent Integration (AIX)
 
-Writing Systems adheres to the Linux Foundation AAIF standard and works across all major coding agents:
+Writing Systems complies with the Linux Foundation AAIF standard and mounts into every major coding assistant:
 
 | Agent Platform | Integration Method | Configuration Path |
 | :--- | :--- | :--- |
@@ -106,7 +106,7 @@ Writing Systems adheres to the Linux Foundation AAIF standard and works across a
 ## The 4 Operational Surfaces
 
 1. **[Human-Facing Prose](docs/human-prose.md):** Architecture decision records, RFCs, PR reviews, and technical specs. Covers Operational and Collaborative registers.
-2. **[UI & Forms Design](docs/ui-microcopy.md):** Microcopy, action buttons, CLI flag help strings, Apple error triad, and accessibility.
+2. **[UI & Forms Design](docs/ui-microcopy.md):** Action buttons, CLI flag help strings, error recovery, and Apple attribution theory.
 3. **[Agent Directives](docs/prompt-engineering.md):** Production system prompts, polarity pairing, and behavioral guardrails.
 4. **[Machine State Protocols](docs/inter-agent-protocols.md):** Typed JSON schemas, deterministic state diffs, and analytical subagent reporting envelopes.
 
