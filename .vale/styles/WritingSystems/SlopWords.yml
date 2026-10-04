@@ -1,0 +1,17 @@
+extends: existence
+message: "Avoid overused AI filler word '%s'. Use concrete operational terms."
+level: error
+ignorecase: true
+tokens:
+  - delve
+  - delve into
+  - leverage
+  - robust
+  - seamless
+  - seamlessly
+  - tapestry
+  - beacon
+  - pivotal
+  - crucial
+  - testament
+  - landscape

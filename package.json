@@ -1,0 +1,45 @@
+{
+  "name": "writing-systems",
+  "version": "1.0.0",
+  "description": "Open-source specification and zero-dependency linter for eliminating AI slop, enforcing Minto BLUF, and structuring agent communications.",
+  "main": "bin/cli.js",
+  "bin": {
+    "writing-systems": "./bin/cli.js"
+  },
+  "scripts": {
+    "test": "python3 scripts/check_writing.py AGENTS.md README.md skills/writing-systems/SKILL.md docs/*.md",
+    "lint": "python3 scripts/check_writing.py docs/*.md",
+    "start": "node bin/cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chamaththiwanka/writing-systems.git"
+  },
+  "keywords": [
+    "ai",
+    "writing-systems",
+    "agents",
+    "agents-md",
+    "minto-bluf",
+    "asd-ste100",
+    "prompt-engineering",
+    "claude-code",
+    "antigravity",
+    "codex",
+    "linter",
+    "developer-tools"
+  ],
+  "author": "Chamath Thiwanka",
+  "license": "MIT",
+  "files": [
+    "AGENTS.md",
+    "CLAUDE.md",
+    "README.md",
+    "bin",
+    "docs",
+    "skills",
+    "scripts",
+    ".vale",
+    "action.yml"
+  ]
+}
