@@ -1,6 +1,6 @@
 # AI Writing Systems & Cognitive Communication
 
-[![CI](https://github.com/chamaththiwanka/writing-systems/actions/workflows/ci.yml/badge.svg)](https://github.com/chamaththiwanka/writing-systems/actions)
+[![CI](https://github.com/chama-x/writing-systems/actions/workflows/ci.yml/badge.svg)](https://github.com/chama-x/writing-systems/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Standard: AAIF AGENTS.md](https://img.shields.io/badge/Standard-AAIF%20AGENTS.md-emerald.svg)](https://agents.md)
 [![Specification: agentskills.io](https://img.shields.io/badge/Spec-agentskills.io-purple.svg)](https://agentskills.io)
@@ -75,7 +75,7 @@ Add automated prose and syntax linting to your repository workflow with two line
 
 ```yaml
 - name: Verify Writing Systems
-  uses: chamaththiwanka/writing-systems@v1
+  uses: chama-x/writing-systems@v1
   with:
     path: 'docs/**/*.md'
 ```

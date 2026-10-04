@@ -17,7 +17,7 @@ All proposals and documentation changes must satisfy these three requirements:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/chamaththiwanka/writing-systems.git
+   git clone https://github.com/chama-x/writing-systems.git
    cd writing-systems
    ```
 

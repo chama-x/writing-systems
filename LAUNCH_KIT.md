@@ -33,7 +33,7 @@ We packaged it using the "shadcn model" rather than an opaque npm dependency:
 
 Running this command drops the vendor-neutral AGENTS.md contract (Linux Foundation AAIF standard), Vale prose styles, and a standalone Python verification script directly into your repository. You own and customize the rules.
 
-GitHub: https://github.com/chamaththiwanka/writing-systems
+GitHub: https://github.com/chama-x/writing-systems
 
 We'd love your feedback on the syntactic ceilings and how your team enforces prompt discipline.
 ```
@@ -65,7 +65,7 @@ The anti-slop technical writing contract for coding agents
 → Drops AGENTS.md + Vale + linter straight into repo
 → Cuts multi-turn context overhead by ~60%
 
-https://github.com/chamaththiwanka/writing-systems
+https://github.com/chama-x/writing-systems
 [attach side-by-side terminal image]
 ```
 
@@ -101,7 +101,7 @@ Same architectural decision. 73% fewer tokens. Zero "Certainly! In today's..."
 
 Open-source contract that makes agent output shorter, decision-first, and human-scannable. Works with Claude Code, Cursor, Antigravity, and Codex.
 
-https://github.com/chamaththiwanka/writing-systems
+https://github.com/chama-x/writing-systems
 ```
 
 ---
@@ -137,7 +137,7 @@ We also adopted aerospace maintenance syntax (ASD-STE100) to cap sentence length
 
 Across our test benchmarks, this cut multi-turn context overhead by ~60% while dramatically improving model instruction following.
 
-Repo: https://github.com/chamaththiwanka/writing-systems
+Repo: https://github.com/chama-x/writing-systems
 CLI: npx writing-systems init
 ```
 
