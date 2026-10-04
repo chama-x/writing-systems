@@ -1,19 +1,21 @@
 # AI Writing Systems & Cognitive Communication
 
+[![Release](https://img.shields.io/github/v/release/chama-x/writing-systems?color=blue)](https://github.com/chama-x/writing-systems/releases)
 [![CI](https://github.com/chama-x/writing-systems/actions/workflows/ci.yml/badge.svg)](https://github.com/chama-x/writing-systems/actions)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Marketplace](https://img.shields.io/badge/Marketplace-AI%20Writing%20Systems-blue?logo=github)](https://github.com/marketplace/actions/ai-writing-systems-linter)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Standard: AAIF AGENTS.md](https://img.shields.io/badge/Standard-AAIF%20AGENTS.md-emerald.svg)](https://agents.md)
 [![Specification: agentskills.io](https://img.shields.io/badge/Spec-agentskills.io-purple.svg)](https://agentskills.io)
 [![Zero Dependencies](https://img.shields.io/badge/Dependencies-Zero-success.svg)](#)
 [![Token Savings](https://img.shields.io/badge/Context%20Savings--60%25-orange.svg)](#)
 
-An open-source specification and zero-dependency linter that eliminates conversational AI slop, enforces Minto BLUF, and structures deterministic multi-agent communication. Grounded in aerospace maintenance syntax (ASD-STE100) and Apple attribution theory.
+Writing Systems eliminates conversational AI slop. It enforces Minto BLUF, Controlled Syntax, and anti-slop regularizers directly in Markdown documents.
 
 ---
 
 ## Quickstart: The One-Command Scaffolder
 
-Scaffold the vendor-neutral contract, Vale prose styles, and standalone linter directly into any project root:
+Scaffold the complete system with one terminal command:
 
 ```bash
 npx writing-systems init
@@ -21,15 +23,20 @@ npx writing-systems init
 
 *Like `shadcn/ui`, you own the code. No permanent runtime dependencies added.*
 
+### CLI Commands
+
+- **Initialize project:** Run `npx writing-systems init` to scaffold `AGENTS.md`, Vale styles, and the Python linter.
+- **Run prose audit:** Run `npx writing-systems check` to validate sentence length, slop words, and cadence variance.
+- **Display system info:** Run `npx writing-systems info` to review the five universal operating invariants.
+
 ---
 
 ## Proof of Life: The Before & After Contrast
 
 ```text
 ┌── [BEFORE] DEFAULT CONVERSATIONAL AI SLOP (312 Tokens) ──────────────────────────┐
-│ "Certainly! In today's fast-paced cloud landscape, it is increasingly crucial to │
-│ delve into our system architecture. While microservices offer a seamless         │
-│ tapestry of modular components, they are not merely flexible, but also           │
+│ "Certainly! In today's cloud environment, it is important to examine our system  │
+│ architecture. While microservices offer many modular components, they also       │
 │ introduce complex operational dynamics. After carefully examining our           │
 │ ingestion pipeline, we have come to the realization that migrating to a          │
 │ monolithic binary could foster significant performance improvements..."          │
@@ -48,30 +55,66 @@ npx writing-systems init
 
 ---
 
+## Two-Tier Enforcement Architecture
+
+Cognitive invariants belong directly in model context. Mechanical checks run inside background linters to prevent prompt attention starvation.
+
+```mermaid
+flowchart LR
+    subgraph Tier1 ["Tier 1: Generation Time (Cognitive)"]
+        A["AGENTS.md Contract"] --> B["AI Coding Agent"]
+        B --> C["Concise Technical Output"]
+    end
+    subgraph Tier2 ["Tier 2: Verification Time (Mechanical)"]
+        C --> D["scripts/check_writing.py"]
+        C --> E["Vale Linter"]
+        D --> F["CI Pipeline Status"]
+        E --> F
+    end
+```
+
+- **Tier 1 (Cognitive Invariants):** `AGENTS.md` directs high-order model reasoning, active voice, bold anchors, and literal precision.
+- **Tier 2 (Mechanical Checks):** `scripts/check_writing.py` and Vale enforce word ceilings, slop word blacklists, and monotone run detection in CI.
+
+---
+
 ## The 5 Universal Operating Invariants
 
-| Invariant | Target Standard | What to Do | What to Ban |
+| Invariant | Target Standard | Operational Action | Prohibited Pattern |
 | :--- | :--- | :--- | :--- |
-| **1. Minto BLUF** | First 50 tokens | Apply Action, Conditional, or Diagnostic BLUFs | Greetings, preambles, throat-clearing |
-| **2. Controlled Syntax** | Max 20w (proc) / 25w (desc) | Active voice; <= 3 noun stacks | Passive nominalizations, run-on clauses |
-| **3. Cadence Variance** | Alternate 5w and 25w | Alternate punchy assertions with compound mechanics | Monotone runs (>= 4 same length) and fragments |
-| **4. Literal Precision** | Operational facts | State concrete system mechanics directly | Decorative metaphors, conversational filler |
-| **5. Ubiquitous Language** | Canonical entity naming | Single canonical term per domain concept | Casual entity synonym swapping |
+| **1. Minto BLUF** | First 50 tokens | Apply Action, Conditional, or Diagnostic BLUFs | Greetings, conversational preambles |
+| **2. Controlled Syntax** | Max 20w (proc) / 25w (desc) | Active voice; <= 3 consecutive nouns | Passive voice, run-on compound clauses |
+| **3. Cadence Variance** | Alternate 5w and 25w | Alternate punchy assertions with compound mechanics | Monotone runs (>= 4 same length) |
+| **4. Literal Precision** | Operational facts | State concrete system mechanics directly | Figurative metaphors, filler phrases |
+| **5. Ubiquitous Language** | Canonical entity naming | Single canonical term per domain entity | Synonym drift within bounded context |
+
+---
+
+## AI Agent Integration (AIX)
+
+Writing Systems adheres to the Linux Foundation AAIF standard and works across all major coding agents:
+
+| Agent Platform | Integration Method | Configuration Path |
+| :--- | :--- | :--- |
+| **Claude Code** | Native reference | Symlinked in `CLAUDE.md` (`@AGENTS.md`) |
+| **Cursor / Windsurf** | System rules | Included in workspace `.cursorrules` or root `AGENTS.md` |
+| **Antigravity / Codex** | Portable skill | Loaded via `skills/writing-systems/SKILL.md` |
+| **GitHub Copilot** | Workspace instructions | Placed in `.github/copilot-instructions.md` |
 
 ---
 
 ## The 4 Operational Surfaces
 
-1. **[Human-Facing Prose](file:///Users/chamaththiwanka/Desktop/0/Projects/writing-systems/docs/human-prose.md):** Architecture decision records, RFCs, PR reviews, and technical specs. Covers Operational and Collaborative registers.
-2. **[UI & Forms Design](file:///Users/chamaththiwanka/Desktop/0/Projects/writing-systems/docs/ui-microcopy.md):** Microcopy, action buttons, CLI flag help strings, Apple error triad, and accessibility.
-3. **[Agent Directives](file:///Users/chamaththiwanka/Desktop/0/Projects/writing-systems/docs/prompt-engineering.md):** Production system prompts, polarity pairing, and behavioral guardrails.
-4. **[Machine State Protocols](file:///Users/chamaththiwanka/Desktop/0/Projects/writing-systems/docs/inter-agent-protocols.md):** Typed JSON schemas, deterministic state diffs, and analytical subagent reporting envelopes.
+1. **[Human-Facing Prose](docs/human-prose.md):** Architecture decision records, RFCs, PR reviews, and technical specs. Covers Operational and Collaborative registers.
+2. **[UI & Forms Design](docs/ui-microcopy.md):** Microcopy, action buttons, CLI flag help strings, Apple error triad, and accessibility.
+3. **[Agent Directives](docs/prompt-engineering.md):** Production system prompts, polarity pairing, and behavioral guardrails.
+4. **[Machine State Protocols](docs/inter-agent-protocols.md):** Typed JSON schemas, deterministic state diffs, and analytical subagent reporting envelopes.
 
 ---
 
 ## Automated CI/CD Integration
 
-Add automated prose and syntax linting to your repository workflow with two lines:
+Add automated prose linting to your repository workflow with two lines:
 
 ```yaml
 - name: Verify Writing Systems
@@ -80,7 +123,7 @@ Add automated prose and syntax linting to your repository workflow with two line
     path: 'docs/**/*.md'
 ```
 
-Or run the zero-dependency Python validator locally:
+Or run the standalone Python validator locally:
 
 ```bash
 python3 scripts/check_writing.py docs/*.md
@@ -102,19 +145,20 @@ writing-systems/
 │   ├── ui-microcopy.md          # UI text, CLI flags, and error recovery
 │   ├── prompt-engineering.md    # System prompts and polarity pairing
 │   ├── inter-agent-protocols.md # Machine state RPCs and analytical subagents
-│   └── viral-case-studies.md    # 2026 distribution benchmarks & research
+│   └── viral-case-studies.md    # 2026 distribution benchmarks and research
 ├── skills/                      # Portable agent skill (agentskills.io spec)
 │   └── writing-systems/
 │       └── SKILL.md             # On-demand tool skill for coding agents
-├── .vale/                       # Vale prose linter configuration
 ├── scripts/                     # Standalone Python linter (zero dependencies)
-└── LAUNCH_KIT.md                # Turnkey viral launch posts (HN, X, Reddit)
+│   └── check_writing.py         # Word count, slop word, and cadence auditor
+├── .vale/                       # Vale prose linter configuration
+└── LAUNCH_KIT.md                # Turnkey launch copy (HN, X, Reddit)
 ```
 
 ---
 
 ## License & Community
 
-- **License:** Licensed under the [MIT License](file:///Users/chamaththiwanka/Desktop/0/Projects/writing-systems/LICENSE).
-- **Contributing:** Read our [Contribution Guide](file:///Users/chamaththiwanka/Desktop/0/Projects/writing-systems/CONTRIBUTING.md) to propose invariant modifications.
+- **License:** Licensed under the [MIT License](LICENSE).
+- **Contributing:** Read our [Contribution Guide](CONTRIBUTING.md) to propose invariant modifications.
 - **Specification:** Adheres to Linux Foundation AAIF `AGENTS.md` and `agentskills.io`.
